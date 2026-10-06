@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SHOOTERS U15</title>
+
+<meta name="description" content="SHOOTERS U15 - Πρόγραμμα αγώνων, αποτελέσματα, ιστορικό αγώνων και φιλικά παιχνίδια.">
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f2;
+    color: #111;
+}
+
+header {
+    background: linear-gradient(135deg, #087f23, #0abf3c);
+    color: white;
+    padding: 25px 15px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-size: 34px;
+    margin-bottom: 6px;
+}
+
+header p {
+    font-size: 15px;
+}
+
+nav {
+    background: #064d17;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav a:hover {
+    background: #0abf3c;
+}
+
+.container {
+    max-width: 950px;
+    margin: auto;
+    padding: 25px 15px;
+}
+
+.section {
+    margin-bottom: 45px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    color: #087f23;
+    font-size: 27px;
+}
+
+.subtitle {
+    color: #666;
+    margin-top: 5px;
+}
+
+.match-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.09);
+}
+
+.match-date {
+    text-align: center;
+    color: #087f23;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.competition {
+    text-align: center;
+    display: inline-block;
+    background: #087f23;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.teams {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.team {
+    width: auto;
+    flex: 1;
+    font-weight: bold;
+}
+
+.team img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.score {
+    font-size: 28px;
+    font-weight: bold;
+    color: #087f23;
+    white-space: nowrap;
+}
+
+.score.loss {
+    color: #d60000;
+}
+
+.info {
+    text-align: center;
+    margin-top: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.scorers {
+    margin-top: 10px;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+}
+
+footer {
+    background: #064d17;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 9px 10px;
+    }
+
+    .teams {
+        gap: 8px;
+    }
+
+    .team {
+        font-size: 13px;
+    }
+
+    .score {
+        font-size: 22px;
+    }
+
+    .team img {
+        width: 60px;
+        height: 60px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>⚽ SHOOTERS U15</h1>
+    <p>Επίσημη σελίδα ομάδας</p>
+</header>
+
+<nav>
+    <a href="#epomenoi">📅 Επερχόμενα Ματς</a>
+    <a href="#istoriko">📜 Ιστορικό Αγώνων</a>
+    <a href="#istoriko">🤝 Φιλικά Παιχνίδια</a>
+</nav>
+
+<main class="container">
+
+<section class="section" id="epomenoi">
+
+    <div class="section-title">
+        <h2>📅 Επερχόμενα Ματς</h2>
+        <p class="subtitle">Τα επόμενα παιχνίδια των SHOOTERS U15</p>
+    </div>
+
+    <div class="match-card">
+
+        <div class="match-date">
+            Σάββατο 10/10/2026 • 09:00
+        </div>
+
+        <div style="text-align:center;">
+            <span class="competition">ΕΠΣΜ</span>
+        </div>
+
+        <div class="teams">
+
+            <div class="team">
+                <img src="https://shootersacademy.gr/wp-content/uploads/2025/01/cropped-logo_shooters-1-22.23.2-1-2.png">
+                SHOOTERS U15
+            </div>
+
+            <div class="score">VS</div>
+
+            <div class="team">
+                <img src="https://lasoga.org/wp-content/uploads/2018/01/Iraklis-escudo-1024x1024.png">
+                ΗΡΑΚΛΗΣ U15
+            </div>
+
+        </div>
+
+        <div class="info">
+            📅 Σάββατο 10/10/2026<br>
+            ⏰ 09:00
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section" id="istoriko">
+
+    <div class="section-title">
+        <h2>📜 Ιστορικό Αγώνων</h2>
+        <p class="subtitle">Όλα τα προηγούμενα φιλικά παιχνίδια των SHOOTERS U15</p>
+    </div>
+
+    <div class="match-card">
+
+        <div class="match-date">Φιλικός Αγώνας</div>
+
+        <div class="teams">
+
+            <div class="team">
+                Απόλλων Καλαμαριάς U15
+            </div>
+
+            <div class="score loss">
+                6 - 2
+            </div>
+
+            <div class="team">
+                <img src="https://shootersacademy.gr/wp-content/uploads/2025/01/cropped-logo_shooters-1-22.23.2-1-2.png">
+                SHOOTERS U15
+            </div>
+
+        </div>
+
+        <div class="info">
+            📍 Pylaia Football Hub
+        </div>
+
+        <div class="scorers">
+            ⚽ Σκόρερ SHOOTERS: Ντίντας, Χρήστος
+        </div>
+
+    </div>
+
+    <div class="match-card">
+
+        <div class="match-date">Φιλικός Αγώνας</div>
+
+        <div class="teams">
+
+            <div class="team">
+                <img src="https://shootersacademy.gr/wp-content/uploads/2025/01/cropped-logo_shooters-1-22.23.2-1-2.png">
+                SHOOTERS U15
+            </div>
+
+            <div class="score">
+                6 - 3
+            </div>
+
+            <div class="team">
+                Joca Bonito U14
+            </div>
+
+        </div>
+
+        <div class="info">
+            📍 Pylaia Football Hub
+        </div>
+
+        <div class="scorers">
+            ⚽ Σκόρερ: Ντίντας, Σοφοκλής, Σοφοκλής,
+            Λεόν, Πασχάλης, Χριστόφορος
+        </div>
+
+    </div>
+
+    <div class="match-card">
+
+        <div class="match-date">Φιλικός Αγώνας</div>
+
+        <div class="teams">
+
+            <div class="team">
+                <img src="https://shootersacademy.gr/wp-content/uploads/2025/01/cropped-logo_shooters-1-22.23.2-1-2.png">
+                SHOOTERS U15
+            </div>
+
+            <div class="score">
+                4 - 3
+            </div>
+
+            <div class="team">
+                Ελπίδα Τούμπας U15
+            </div>
+
+        </div>
+
+        <div class="info">
+            📍 Pylaia Football Hub
+        </div>
+
+        <div class="scorers">
+            ⚽ Σκόρερ: Λεόν, Σίνα, Χριστόφορος, Αλέξανδρος
+        </div>
+
+    </div>
+
+    <div class="match-card">
+
+        <div class="match-date">Φιλικός Αγώνας</div>
+
+        <div class="teams">
+
+            <div class="team">
+                <img src="https://shootersacademy.gr/wp-content/uploads/2025/01/cropped-logo_shooters-1-22.23.2-1-2.png">
+                SHOOTERS U15
+            </div>
+
+            <div class="score">
+                3 - 2
+            </div>
+
+            <div class="team">
+                Μαραθώνας U15
+            </div>
+
+        </div>
+
+        <div class="info">
+            📍 Pylaia Football Hub
+        </div>
+
+        <div class="scorers">
+            ⚽ Σκόρερ: Ζακίλας, Ζακίλας, Ντίντας
+        </div>
+
+    </div>
+
+    <div class="match-card">
+
+        <div class="match-date">Φιλικός Αγώνας</div>
+
+        <div class="teams">
+
+            <div class="team">
+                <img src="https://shootersacademy.gr/wp-content/uploads/2025/01/cropped-logo_shooters-1-22.23.2-1-2.png">
+                SHOOTERS U15
+            </div>
+
+            <div class="score loss">
+                6 - 7
+            </div>
+
+            <div class="team">
+                Πεύκα U15
+            </div>
+
+        </div>
+
+        <div class="info">
+            📍 Pylaia Football Hub
+        </div>
+
+        <div class="scorers">
+            ⚽ Σκόρερ: Ζακίλας, Νάθα, Ντίντας,
+            Ντίντας, Πασχάλης, Χριστόφορος
+        </div>
+
+    </div>
+
+    <div class="match-card">
+
+        <div class="match-date">Φιλικός Αγώνας</div>
+
+        <div class="teams">
+
+            <div class="team">
+                <img src="https://shootersacademy.gr/wp-content/uploads/2025/01/cropped-logo_shooters-1-22.23.2-1-2.png">
+                SHOOTERS U15
+            </div>
+
+            <div class="score">
+                4 - 2
+            </div>
+
+            <div class="team">
+                Αίαντας Πυλαίας U15
+            </div>
+
+        </div>
+
+        <div class="info">
+            📍 Pylaia Football Hub
+        </div>
+
+        <div class="scorers">
+            ⚽ Σκόρερ: Πασχάλης, Ζακίλας,
+            Άγγελος, Παπαδημητρίου
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+    <p>⚽ SHOOTERS U15</p>
+    <p>Football • Team • Passion</p>
+</footer>
+
+</body>
+  </html>
